@@ -1,4 +1,4 @@
-package projeto.teste.ui.tricents.elements;
+package projeto.teste.ui.tricents.pageObjects;
 
 import java.io.IOException;
 
@@ -126,6 +126,7 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		case "Silver":
 		
 			By seguroSilver = By.xpath("//tfoot[1]/tr[1]/th[2]/label[1]");
+			Thread.sleep(1000);
 			metodo.clicar(seguroSilver);
 			metodo.screenshot(nomeEvidencia);
 			
@@ -134,6 +135,7 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		case "Gold":
 
 			By seguroGold = By.xpath("//tfoot[1]/tr[1]/th[2]/label[2]");
+			Thread.sleep(1000);
 			metodo.clicar(seguroGold);
 			metodo.screenshot(nomeEvidencia);
 
@@ -142,6 +144,7 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		case "Platinum":
 
 			By seguroPlatinum = By.xpath("//tfoot[1]/tr[1]/th[2]/label[3]");
+			Thread.sleep(1000);
 			metodo.clicar(seguroPlatinum);
 			metodo.screenshot(nomeEvidencia);
 
@@ -150,6 +153,7 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		case "Ultimate":
 
 			By seguroUltimate = By.xpath("//tfoot[1]/tr[1]/th[2]/label[4]");
+			Thread.sleep(1000);
 			metodo.clicar(seguroUltimate);
 			metodo.screenshot(nomeEvidencia);
 

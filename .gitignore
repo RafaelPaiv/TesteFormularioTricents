@@ -5,3 +5,4 @@ cucumber-reports/
 # Arquivos de configuração específicos do ambiente
 config.properties
 jox-yjjv-nis
+/target/

@@ -6,8 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import projeto.teste.ui.tricents.browsers.Browsers;
-import projeto.teste.ui.tricents.elements.VehiclePage;
 import projeto.teste.ui.tricents.metodos.Metodos;
+import projeto.teste.ui.tricents.pageObjects.VehiclePage;
 
 public class Formulario_Seguro_Teste {
 
