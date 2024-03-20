@@ -48,7 +48,7 @@ public class Formulario_Seguro_Teste {
 	}
 
 	@Given("seleciono uma modalidade de seguro na página selectPriceOption")
-	public void selecionoUmaModalidadeDeSeguroNaPáginaSelectPriceOption() {
+	public void selecionoUmaModalidadeDeSeguroNaPáginaSelectPriceOption() throws InterruptedException {
 
 		vp.selectPriceOption("Gold", "evidenciaSelectPriceOption");
 

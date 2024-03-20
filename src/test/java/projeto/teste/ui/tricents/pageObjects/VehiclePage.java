@@ -113,7 +113,7 @@ public void enterProductData (String dataInicio, int optionValorSeguro, int opti
  * disponiveis: Silver (Silver), Gold (Gold), Platinum (Platinum) e Ultimate(Ultimate)
  */
 
-public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
+public void selectPriceOption (String modeloSeguro, String nomeEvidencia) throws InterruptedException {
 	
 	//Web Elements:
 	By btnnext4 = By.id("nextsendquote");
@@ -126,36 +126,37 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		case "Silver":
 		
 			By seguroSilver = By.xpath("//tfoot[1]/tr[1]/th[2]/label[1]");
-			Thread.sleep(1000);
 			metodo.clicar(seguroSilver);
 			metodo.screenshot(nomeEvidencia);
-			
+			metodo.mouseOver(btnnext4);
+			metodo.clicar(btnnext4);
 			break;
 
 		case "Gold":
 
 			By seguroGold = By.xpath("//tfoot[1]/tr[1]/th[2]/label[2]");
-			Thread.sleep(1000);
 			metodo.clicar(seguroGold);
 			metodo.screenshot(nomeEvidencia);
-
+			metodo.mouseOver(btnnext4);
+			metodo.clicar(btnnext4);
 			break;
 
 		case "Platinum":
 
 			By seguroPlatinum = By.xpath("//tfoot[1]/tr[1]/th[2]/label[3]");
-			Thread.sleep(1000);
 			metodo.clicar(seguroPlatinum);
 			metodo.screenshot(nomeEvidencia);
-
+			metodo.mouseOver(btnnext4);
+			metodo.clicar(btnnext4);
 			break;
 			
 		case "Ultimate":
 
 			By seguroUltimate = By.xpath("//tfoot[1]/tr[1]/th[2]/label[4]");
-			Thread.sleep(1000);
 			metodo.clicar(seguroUltimate);
 			metodo.screenshot(nomeEvidencia);
+			metodo.mouseOver(btnnext4);
+			metodo.clicar(btnnext4);
 
 			break;
 
@@ -170,8 +171,8 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 		System.out.println("Opção de navegador " + modeloSeguro
 				+ " inválida. Inserir uma das opções disponiveis: Silver, Gold, Platinum e Ultimate");
 	}
+
 	
-	metodo.clicar(btnnext4);
 
 }
 
