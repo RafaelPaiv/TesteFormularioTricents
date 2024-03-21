@@ -45,7 +45,7 @@
 
 # Projeto automação de cotação de seguros automobilísticos no site da Tricents
 
-<img src="https://github.com/RafaelPaiv/TesteFormularioTricents/blob/main/src/test/resources/Imagens/tricentis-gmbh-vector-logo-2022.svg"  width="400px"; alt="Imagem Tricents">
+<img src="https://github.com/RafaelPaiv/TesteFormularioTricents/blob/main/src/test/resources/Imagens/Tricentis Logo Vector.png"  width="400px"; alt="Imagem Tricents">
 
 Este projeto de automação de testes funcionais consiste em validar o site da Tricents com foco na funcionalidade de cotação de seguros automobilísticos, utilizando as tecnologias:
 
