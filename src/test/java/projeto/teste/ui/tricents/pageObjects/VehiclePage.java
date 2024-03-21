@@ -14,7 +14,7 @@ public class VehiclePage extends Drivers {
 	Metodos metodo = new Metodos();
 	
 	
-	public void enterVehicleData (int optionMake, int optionModel, String capacidadeCilindro, String motor, String dataFabricacao, int optionNumberOfSeats, int optionNumberOfSeatsMotorcycle, int optionFuel, String cargaUtil, String pesoTotal, String precoTabelado, String milhasAno, String nomeEvidencia) throws InterruptedException, IOException {
+	public void enterVehicleData (int optionMake, int optionModel, String capacidadeCilindro, String motor, String dataFabricacao, int optionNumberOfSeats, int optionNumberOfSeatsMotorcycle, int optionFuel, String cargaUtil, String pesoTotal, String precoTabelado, String milhasAno, String nomeEvidencia)  {
 		
 		//Web Elements:
 		
@@ -46,13 +46,21 @@ public class VehiclePage extends Drivers {
 		metodo.digitar(totalweight, pesoTotal);//300
 		metodo.digitar(listprice, precoTabelado);//50000
 		metodo.digitar(annualmileage, milhasAno);//5000
-		metodo.screenshot(nomeEvidencia);
+		try {
+			metodo.screenshot(nomeEvidencia);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		metodo.clicar(btnnext1);
 		
 	}
 	
 	
-public void enterInsurantData (String nome, String sobrenome, String dataNascimento, int optionPais, String cep, int optionProfissao, int optionHobbies, String nomeEvidencia ) throws InterruptedException, IOException {
+public void enterInsurantData (String nome, String sobrenome, String dataNascimento, int optionPais, String cep, int optionProfissao, int optionHobbies, String nomeEvidencia )  {
 		
 		//Web Elements:
 		
@@ -75,13 +83,21 @@ public void enterInsurantData (String nome, String sobrenome, String dataNascime
 		metodo.digitar(zipcode, cep);
 		metodo.clicar(occupation);//2
 		metodo.clicar(hobbies);//2
-		metodo.screenshot(nomeEvidencia);
+		try {
+			metodo.screenshot(nomeEvidencia);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		metodo.clicar(btnnext2);
 		
 		
 	}
 	
-public void enterProductData (String dataInicio, int optionValorSeguro, int optionIndiceMerit, int optionDamageInsurance, int opitionOptionalProducts, int optionCarroCortesia, String nomeEvidencia ) throws InterruptedException, IOException {
+public void enterProductData (String dataInicio, int optionValorSeguro, int optionIndiceMerit, int optionDamageInsurance, int opitionOptionalProducts, int optionCarroCortesia, String nomeEvidencia ) {
 	
 	//Web Elements:
 	
@@ -102,7 +118,15 @@ public void enterProductData (String dataInicio, int optionValorSeguro, int opti
 	metodo.clicar(damageinsurance);//3
 	metodo.clicar(optionalproducts);//1
 	metodo.clicar(courtesycar);//2
-	metodo.screenshot(nomeEvidencia);
+	try {
+		metodo.screenshot(nomeEvidencia);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	metodo.clicar(btnnext3);
 	
 }
@@ -113,7 +137,7 @@ public void enterProductData (String dataInicio, int optionValorSeguro, int opti
  * disponiveis: Silver (Silver), Gold (Gold), Platinum (Platinum) e Ultimate(Ultimate)
  */
 
-public void selectPriceOption (String modeloSeguro, String nomeEvidencia) throws InterruptedException {
+public void selectPriceOption (String modeloSeguro, String nomeEvidencia) {
 	
 	//Web Elements:
 	By btnnext4 = By.id("nextsendquote");
@@ -177,7 +201,7 @@ public void selectPriceOption (String modeloSeguro, String nomeEvidencia) throws
 }
 
 
-public void sendQuote (String enderecoEmail, String telefone, String usuario, String senha, String confirmacaoSenha ) throws InterruptedException, IOException {
+public void sendQuote (String enderecoEmail, String telefone, String usuario, String senha, String confirmacaoSenha ) {
 	
 	//Web Elements:
 	
@@ -203,14 +227,27 @@ public void sendQuote (String enderecoEmail, String telefone, String usuario, St
 }
 
 
-public void validarMsgCotacao( String nomeEvidencia) throws InterruptedException, IOException {
+public void validarMsgCotacao( String nomeEvidencia) {
 	
 	By msgValidacao = By.xpath("//h2[text()='Sending e-mail success!']");
 	By btnconfirm = By.xpath("//button[@class='confirm']");
 	
-	Thread.sleep(10000);
+	try {
+		Thread.sleep(10000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	metodo.validarTexto(msgValidacao, "Sending e-mail success!");
-	metodo.screenshot(nomeEvidencia);
+	try {
+		metodo.screenshot(nomeEvidencia);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	metodo.clicar(btnconfirm);
 	Browsers.fecharNavegador();
 	
