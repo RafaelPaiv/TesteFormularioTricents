@@ -45,9 +45,9 @@
 
 # Projeto automação de cotação de seguros automobilísticos no site da Tricents
 
-<img src="C:\Users\rafae\OneDrive\Área de Trabalho\E2E -  2022\Java\112022\projeto.teste.ui.tricents\src\test\resources\Imagens\Tricentis-Logo.jpg" alt="Imagem Tricents">
+<img src="C:\Users\rafae\OneDrive\Área de Trabalho\E2E -  2022\Java\112022\projeto.teste.ui.tricents\src\test\resources\Imagens\tricentis-gmbh-vector-logo-2022.svg"  width="400px"; alt="Imagem Tricents">
 
-Este projeto de automação de testes funcionais consiste em validar o site dos correios com relação as funcionalidades de buscar CEP e endereços, utilizando as tecnologias:
+Este projeto de automação de testes funcionais consiste em validar o site da Tricents com foco na funcionalidade de cotação de seguros automobilísticos, utilizando as tecnologias:
 
 - Cucumber: para implementar cenários de teste em linguagem natural (Gherkin) em conformidade com a metodologia BDD;
 - Junit: para validação dos testes realizados;

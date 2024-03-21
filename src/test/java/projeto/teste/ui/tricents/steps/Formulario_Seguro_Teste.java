@@ -1,7 +1,5 @@
 package projeto.teste.ui.tricents.steps;
 
-import java.io.IOException;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,47 +20,42 @@ public class Formulario_Seguro_Teste {
 	}
 
 	@Given("preencho todos os dados obrigatórios do formulário enterVehicleData")
-	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterVehicleData()
-			 {
+	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterVehicleData() {
 
-		vp.enterVehicleData(3, 5, "250", "20", "05/10/2023", 3, 3, 2, "100", "300", "50000", "5000",
-				"evidenciaFormularioEnterVehicleData");
+		vp.enterVehicleData(3, 5, "250", "20", "05/10/2023", 3, 3, 2, "100", "300", "50000", "5000","evidenciaFormularioEnterVehicleData");
 
 	}
 
 	@Given("preencho todos os dados obrigatórios do formulário enterInsurantData")
-	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterInsurantData()
-			 {
+	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterInsurantData() {
 
-		vp.enterInsurantData("James", "Rodriguez", "04/10/1995", 32, "0518099", 2, 1,
-				"evidenciaFormularioEnterInsurantData");
+		vp.enterInsurantData("James", "Rodriguez", "04/10/1995", 32, "0518099", 2, 1,"evidenciaFormularioEnterInsurantData");
 
 	}
 
 	@Given("preencho todos os dados obrigatórios do formulário enterProductData")
-	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterProductData()
-			 {
+	public void preenchoTodosOsDadosObrigatóriosDoFormulárioEnterProductData() {
 
 		vp.enterProductData("05/17/2024", 5, 5, 3, 1, 2, "evidenciaFormularioEnterProductData");
 
 	}
 
 	@Given("seleciono uma modalidade de seguro na página selectPriceOption")
-	public void selecionoUmaModalidadeDeSeguroNaPáginaSelectPriceOption()  {
+	public void selecionoUmaModalidadeDeSeguroNaPáginaSelectPriceOption() {
 
 		vp.selectPriceOption("Gold", "evidenciaSelectPriceOption");
 
 	}
 
 	@When("envio email para cotação na página sendQuote")
-	public void envioEmailParaCotaçãoNaPáginaSendQuote()  {
+	public void envioEmailParaCotaçãoNaPáginaSendQuote() {
 
 		vp.sendQuote("rafa.paiva@gmail.com", "11961243340", "jamesRodri", "Jr1234", "Jr1234");
 
 	}
 
 	@Then("valido mensagem de sucesso")
-	public void validoMensagemDeSucesso()  {
+	public void validoMensagemDeSucesso() {
 
 		vp.validarMsgCotacao("evidenciaSendQuote");
 
